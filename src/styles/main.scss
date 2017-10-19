@@ -1,0 +1,96 @@
+$darker: #283655;
+$dark: #4D648D;
+$light: #D0E1F9;
+
+body {
+  margin: 0;
+  background-color: $light;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+header {
+  grid-column: 1 / 6;
+  background-color: $darker;
+  padding: 1rem;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .main {
+    grid-column: 1;
+  }
+
+  .extra {
+    grid-column: 2;
+  }
+
+  h1, h2, h3 {
+    color: $light;
+  }
+  h2 {
+    text-transform: uppercase;
+  }
+  h3 {
+    text-align: right;
+  }
+
+  ul {
+    list-style: none;
+    text-align: right;
+    li {
+      display: inline-block;
+      margin: 0.5rem;
+      a {
+        text-decoration: none;
+        border-bottom: solid;
+        &:link, &:visited {
+          color: $light;
+          border-bottom-color: $light;
+        }
+        &:hover, &:active {
+          color: $dark;
+          border-bottom-color: $dark;
+        }
+      }
+    }
+  }
+}
+
+nav {
+  grid-column: 1;
+  background-color: $dark;
+
+  ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    li {
+      margin: 2rem 0 2rem 0;
+      a {
+        text-decoration: none;
+        border-bottom: solid;
+        &:link, &:visited {
+          color: $light;
+          border-bottom-color: $light;
+        }
+        &:hover, &:active {
+          color: $darker;
+          border-bottom-color: $darker;
+        }
+      }
+    }
+  }
+}
+
+content {
+  grid-column: 2 / 6;
+  padding: 0.5rem;
+
+  form {
+    div {
+      margin: 0.5rem;
+    }
+  }
+}

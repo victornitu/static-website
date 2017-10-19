@@ -1,0 +1,29 @@
+{
+  "name": "static-website",
+  "version": "1.0.0",
+  "description": "Static website builder",
+  "main": "index.js",
+  "scripts": {
+    "build": "coffee index.coffee",
+    "build:watch": "nodemon -e coffee,pug,scss,yaml index.coffee",
+    "clean:build": "rm dist/**/*.html dist/styles/*.css dist/scripts/*.js"
+  },
+  "author": "VVF Luxembourg S.A. (vvfluxembourg.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/victornitu/static-website.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^3.10.0",
+    "node-sass": "^4.5.3",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "coffeescript": "^2.0.1",
+    "nodemon": "^1.12.1"
+  }
+}

@@ -1,0 +1,10 @@
+header
+  .main
+    h2 #{common.website.name}
+    h1 #{i18n[page].title}
+  .extra
+    h3#datetime ...
+    ul
+      each lang in languages
+        li
+          a(href=`../${lang}/${page}.html`) #{lang}
